@@ -17,8 +17,8 @@ import kotlinx.android.synthetic.main.content_main.*
 class MainActivity : AppCompatActivity() {
 
     var dbHandler: DatabaseHandler? = null
-    var isEditMode = false
-    private lateinit var button: Button
+    private lateinit var buttonListData: Button
+    private lateinit var buttonAbout: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,9 +27,14 @@ class MainActivity : AppCompatActivity() {
         initDB()
         initOperations(this)
 
-        button = findViewById(R.id.buttonData)
-        button.setOnClickListener{
+        buttonListData = findViewById(R.id.buttonData)
+        buttonListData.setOnClickListener{
             startActivity(Intent(this, ListActivity::class.java))
+        }
+
+        buttonAbout = findViewById(R.id.buttonAbout)
+        buttonAbout.setOnClickListener{
+            startActivity(Intent(this, AboutActivity::class.java))
         }
 
         fab.setOnClickListener { view ->

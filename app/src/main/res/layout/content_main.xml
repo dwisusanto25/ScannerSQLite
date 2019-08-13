@@ -28,13 +28,19 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
-                android:text="@string/save" />
+                android:text="@string/simpan" />
 
         <Button
                 android:id="@+id/buttonData"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/data_tersimpan" />
+
+        <Button
+                android:id="@+id/buttonAbout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tentang" />
 
     </LinearLayout>
 

@@ -18,14 +18,10 @@
 
         <TextView
                 android:id="@+id/tvName"
-                android:fontFamily="sans-serif-smallcaps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="#000"
-                tools:targetApi="jelly_bean"/>
+                android:textSize="24sp"/>
 
     </LinearLayout>
 
