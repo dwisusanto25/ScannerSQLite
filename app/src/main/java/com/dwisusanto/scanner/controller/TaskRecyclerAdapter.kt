@@ -32,7 +32,7 @@ class TaskRecyclerAdapter(datasList: List<DataScan>, internal var context: Conte
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val datas = datasList[position]
         holder.name.text = datas.name
-        if (datas.name !=null)
+        if (datas.name.isNullOrEmpty())
             holder.list_item.background = ContextCompat.getDrawable(context, R.color.colorSuccess)
         else
             holder.list_item.background = ContextCompat.getDrawable(context, R.color.colorUnSuccess)

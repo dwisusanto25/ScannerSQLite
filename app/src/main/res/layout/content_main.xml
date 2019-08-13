@@ -13,12 +13,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_margin="10dp"
             android:gravity="center">
 
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="silahkan input di sini"
+                android:hint="@string/silahkan_input_di_sini"
                 android:layout_margin="10dp"
                 android:id="@+id/text_barcode"/>
 
@@ -27,14 +28,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
-                android:text="Save"
-                android:fontFamily="sans-serif-smallcaps" />
+                android:text="@string/save" />
 
         <Button
                 android:id="@+id/buttonData"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Data Tersimpan" />
+                android:text="@string/data_tersimpan" />
 
     </LinearLayout>
 

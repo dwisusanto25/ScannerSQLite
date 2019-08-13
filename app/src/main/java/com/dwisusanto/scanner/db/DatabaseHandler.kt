@@ -45,7 +45,7 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context, DatabaseHand
     fun data(): List<DataScan> {
         val scannerList = ArrayList<DataScan>()
         val db = writableDatabase
-        val selectQuery = "SELECT  * FROM $TABLE_NAME"
+        val selectQuery = "SELECT  * FROM $TABLE_NAME ORDER BY ID  DESC"
         val cursor = db.rawQuery(selectQuery, null)
         if (cursor != null) {
             if (cursor.moveToFirst()) {

@@ -49,16 +49,15 @@ class MainActivity : AppCompatActivity() {
             if (!datas.name.isNullOrEmpty()){
                 success = dbHandler?.addScanner(datas) as Boolean
                 if (success){
-//                    successMessage(this)
                     context.toast("Succes Add Data")
+                    text_barcode.setText("")
                 }else{
                     context.toast("Failled Add Data")
+                    text_barcode.setText("")
                 }
             }else{
                 context.toast("Data Kosong")
             }
-//            dbHandler?.addScanner(datas)
-
 
         })
     }
@@ -68,22 +67,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun initDB() {
         dbHandler = DatabaseHandler(this)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -96,8 +79,8 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Success Get Data", Toast.LENGTH_LONG).show()
 
-                val tvHello=findViewById(R.id.text_barcode) as TextView;
-                tvHello.text=result.contents
+                val textBarcode=findViewById(R.id.text_barcode) as TextView;
+                textBarcode.text=result.contents
             }
         }
     }
